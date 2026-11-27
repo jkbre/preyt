@@ -1,0 +1,18 @@
+{
+  "name": "preyt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Right-click YouTube links in Firefox/Zen to get a summary and timestamped key points from Google Gemini (your own API key).",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test 'test/**/*.test.mjs'",
+    "lint:ext": "npx --yes web-ext@10.8.0 lint --source-dir extension",
+    "build": "node scripts/build.mjs",
+    "test:gecko": "node test/gecko/run-gecko-selftest.mjs",
+    "demo": "node scripts/build-demo.mjs && node scripts/record-demo.mjs"
+  }
+}

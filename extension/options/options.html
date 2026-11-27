@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Preyt options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <form id="form" autocomplete="off">
+      <section>
+        <h2>Gemini API key</h2>
+        <p class="muted">Preyt sends transcripts directly to Google’s Gemini API with your own key. Create a free key in <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a> and paste it here.</p>
+        <label>API key
+          <span class="inline">
+            <input name="apiKey" type="password" spellcheck="false" placeholder="Paste your Gemini API key" pattern="[A-Za-z0-9_.\-]{20,200}">
+            <button type="button" id="reveal" class="ghost">Show</button>
+          </span>
+        </label>
+        <p class="muted small">Stored only in this browser profile’s extension storage (not synced, not encrypted). It is sent only to generativelanguage.googleapis.com.</p>
+        <div class="inline">
+          <button type="button" id="test">Test key</button>
+          <span id="test-result" class="muted" role="status"></span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Summary</h2>
+        <label>Model
+          <select name="model"></select>
+        </label>
+        <p class="muted small">“Test key” loads the models your key can use. Flash-Lite models are the fastest; free-tier limits are counted per model.</p>
+        <label>Length
+          <select name="length">
+            <option value="short">Short</option>
+            <option value="standard">Standard</option>
+            <option value="detailed">Detailed</option>
+          </select>
+        </label>
+        <label>Summary language
+          <select name="outputLanguage">
+            <option value="auto">Same as the video</option>
+            <option>English</option>
+            <option>Polish</option>
+            <option>German</option>
+            <option>French</option>
+            <option>Spanish</option>
+            <option>Italian</option>
+            <option>Portuguese</option>
+            <option>Ukrainian</option>
+            <option>Japanese</option>
+          </select>
+        </label>
+        <label>Show results in
+          <select name="displayMode">
+            <option value="popup">Toolbar popup (default)</option>
+            <option value="window">Small separate window</option>
+          </select>
+        </label>
+        <label class="check"><input type="checkbox" name="showThumbnails"> Show video thumbnails (loaded from i.ytimg.com)</label>
+      </section>
+
+      <section>
+        <h2>Transcript retrieval</h2>
+        <label class="check"><input type="checkbox" name="useCurrentTab"> When I summarize the video page I’m on, read the transcript from that tab first (read-only: nothing is clicked or paused)</label>
+        <p class="muted small">Otherwise Preyt opens the video in an inactive, muted tab, reads the transcript there and closes the tab right away (usually 2–4 s). That tab uses your normal YouTube session, like opening the link yourself, so it may count as a visit; the video is paused immediately.</p>
+      </section>
+
+      <section>
+        <h2>Privacy &amp; data sent</h2>
+        <div class="disclosure">
+          <p>When you summarize a video, Preyt sends the <strong>transcript text, title, channel, duration, chapter titles and video ID</strong> (or, for the metadata-only option, the title and description) <strong>directly from this browser to Google’s Gemini API</strong> (<code>generativelanguage.googleapis.com</code>), authenticated with your API key. There is no Preyt server.</p>
+          <p>With a <strong>free-tier key, Google may use what you send to improve its products, and people may review it</strong>. With billing enabled, the paid-tier terms apply. See the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Gemini API terms</a>. Recent results are kept in memory until the browser closes.</p>
+        </div>
+        <label class="check"><input type="checkbox" name="askBeforeSending"> Ask before every summary</label>
+        <button type="button" id="reset-consent" class="ghost">Show the first-use disclosure again</button>
+      </section>
+
+      <p id="saved" class="muted small" role="status"></p>
+    </form>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

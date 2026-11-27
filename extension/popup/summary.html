@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Preyt summary</title>
+    <link rel="stylesheet" href="summary.css">
+  </head>
+  <body>
+    <header class="video" id="video" hidden>
+      <img class="thumb" id="thumb" alt="" width="96" height="54" hidden>
+      <div class="video-text">
+        <a class="video-title" id="video-title" target="_blank" rel="noopener noreferrer"></a>
+        <div class="video-sub" id="video-sub"></div>
+      </div>
+    </header>
+    <main id="view" aria-live="polite"></main>
+    <footer class="bar" id="bar">
+      <span class="bar-meta" id="bar-meta"></span>
+      <span class="bar-actions">
+        <button type="button" class="ghost icon" id="copy" title="Copy as Markdown" hidden>Copy</button>
+        <button type="button" class="ghost icon" id="regenerate" title="Summarize again" hidden>Regenerate</button>
+        <button type="button" class="ghost icon" id="options" title="Options">Options</button>
+      </span>
+    </footer>
+    <script type="module" src="summary.js"></script>
+  </body>
+</html>

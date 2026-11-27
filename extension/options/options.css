@@ -1,0 +1,20 @@
+:root { color-scheme: light dark; --border: #e0e0e6; --muted: #5b5b66; --bg: #fff; --text: #15141a; --surface: #f9f9fb; --accent: #0061e0; }
+@media (prefers-color-scheme: dark) { :root { --border: #3d3c45; --muted: #b8b7c0; --bg: #2b2a33; --text: #fbfbfe; --surface: #23222b; --accent: #00ddff; } }
+body { font: message-box; font-size: 13px; line-height: 1.5; margin: 0; padding: 8px 16px 24px; max-width: 640px; background: var(--bg); color: var(--text); }
+h2 { font-size: 14px; margin: 18px 0 6px; }
+section { border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+label { display: flex; flex-direction: column; gap: 4px; margin: 10px 0; font-weight: 600; }
+label.check { flex-direction: row; align-items: center; font-weight: normal; gap: 8px; }
+input[type=url], input[type=password], input[type=text], select { font: inherit; padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: inherit; font-weight: normal; }
+input:invalid { border-color: #d70022; }
+.inline { display: flex; gap: 8px; align-items: center; }
+.inline input { flex: 1; }
+button { font: inherit; padding: 5px 12px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: inherit; cursor: pointer; }
+button.ghost { border-color: transparent; background: transparent; color: var(--accent); padding: 4px 0; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+.ok { color: #058b00; }
+.bad { color: #d70022; }
+@media (prefers-color-scheme: dark) { .ok { color: #54ffbd; } .bad { color: #ff848b; } }
+.disclosure { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; }
+code { font-size: 12px; }
