@@ -4,9 +4,9 @@
 
 Right-click a YouTube link in **Firefox or Zen** → **Summarize YouTube video** → get a short summary with clickable, timestamped key points. Powered by Google Gemini with your own (free) API key.
 
-![Preyt popup (simulated data)](demo/out/preyt-showcase-poster.png)
+![Preyt demo (simulated data)](demo/out/preyt-showcase.gif)
 
-[Watch the 33 s demo](demo/out/preyt-showcase.mp4) (simulated data).
+<sub>Demo with simulated data · [MP4 version](demo/out/preyt-showcase.mp4)</sub>
 
 ## Install
 
