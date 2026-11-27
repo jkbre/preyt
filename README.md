@@ -13,7 +13,7 @@ Right-click a YouTube link in **Firefox or Zen** → **Summarize YouTube video**
 1. Download `preyt-0.2.0.xpi` from [Releases](../../releases/latest).
 2. In Firefox/Zen open `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → pick the `.xpi`.
    It stays until the browser restarts (unsigned add-ons can't be installed permanently).
-3. Get a free API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+3. Get an API key in [Google AI Studio](https://aistudio.google.com/) (**Get API key**, or directly at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)). The Gemini API currently has a free tier, so a regular free Google account is enough; no billing setup is needed.
 4. Open the add-on's **Options**, paste the key, click **Test key**.
 
 ## Privacy
